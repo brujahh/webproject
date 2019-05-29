@@ -1,0 +1,13 @@
+{
+"companyName": "DefaultCompany",
+"productName": "ColorSpace",
+"dataUrl": "colorscheme_webbuild.data.unityweb",
+"asmCodeUrl": "colorscheme_webbuild.asm.code.unityweb",
+"asmMemoryUrl": "colorscheme_webbuild.asm.memory.unityweb",
+"asmFrameworkUrl": "colorscheme_webbuild.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}

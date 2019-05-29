@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Color Android status bar -->
+    <meta name="theme-color" content="#009600" />
+	<title>Monster Builder</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand+SC" rel="stylesheet">
+    <!-- CSS -->
+    <link type="text/css" rel="stylesheet" href="../css/style.css">
+    <!-- JS -->
+	<script src="../js/universal.js"></script>
+</head>
+<body>
+
+	<!-- Used in JS to check whether the game is SP or MP -->
+	<div id="multiPlayer" style="display: none;"></div>
+
+	<!-- Fixed top navbar -->
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+	    	<div class="navbar-header">
+	    		<!-- Burgermenu for mobile displays -->
+	    		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+				</button>
+	      		<a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Monster Builder</a>
+	    	</div>
+	    	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			    <ul class="nav navbar-nav navbar-right">
+			    	<li><a href="singleplayer.html"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Single-player</a></li>
+			      	<li class="active"><a href="multiplayer.html"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Multi-player</a></li>
+			    </ul>
+			</div>
+	  	</div>
+	</nav>
+
+	<!-- Page heading -->
+	<h1 id="heading">PLAYER 1 CREATE YOUR MONSTER</h1>
+	<!-- Guides under heading -->
+	<h3 id="guide"><i>Loop through different bodyparts by clicking on the corresponding slot</i></h3>
+	<h3 id="opponentGuide"><i>The fight will begin after player 2 has saved their monster</i></h3>
+
+	<!-- Players monster -->
+	<div class="container-fluid">
+		<div class="col-sm-6" id="playerMonster">
+			<h2><span class="underline" id="pName">PLAYER 1</span></h2>
+			<div class="scale">
+				<div class="row">
+					<div class="col-xs-4 col-xs-offset-4" id="pHead">
+						<img src="../assets/monster/starter/head_0.png" alt="Monster Bodypart">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-4" id="pLeftHand">
+						<img src="../assets/monster/starter/hand_left_0.png" alt="Monster Bodypart">
+					</div>
+					<div class="col-xs-4" id="pChest">
+						<img src="../assets/monster/starter/body_0.png" alt="Monster Bodypart">
+					</div>
+					<div class="col-xs-4" id="pRightHand">
+						<img src="../assets/monster/starter/hand_right_0.png" alt="Monster Bodypart">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-4 col-xs-offset-2" id="pLeftLeg">
+						<img src="../assets/monster/starter/leg_left_0.png" alt="Monster Bodypart">
+					</div>
+					<div class="col-xs-4" id="pRightLeg">
+						<img src="../assets/monster/starter/leg_right_0.png" alt="Monster Bodypart">
+					</div>
+				</div>
+			</div>
+
+			<!-- Monster namebar -->
+			<div id="playerNamebar">
+				<div class="row">
+					<div class="col-sm-8 col-sm-offset-2">
+						<div class="form-group">
+							<input type="text" name="playerName" id="playerName" value="" maxlength="20" placeholder="Insert monsters' name" class="form-control">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-8 col-sm-offset-2">
+						<button type="button" onclick="saveMonster(1)" class="controlBtn">Save</button>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	
+		<!-- Opponents monster -->
+		<div class="col-sm-6" id="enemyMonster">
+			<h2><span class="underline" id="eName">PLAYER 2</span></h2>
+			<div class="scale">
+				<div class="row">
+					<div class="col-xs-4 col-xs-offset-4" id="eHead">
+						<img src="../assets/monster/starter/head_0.png" alt="Monster Bodypart">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-4" id="eLeftHand">
+						<img src="../assets/monster/starter/hand_left_0.png" alt="Monster Bodypart">
+					</div>
+					<div class="col-xs-4" id="eChest">
+						<img src="../assets/monster/starter/body_0.png" alt="Monster Bodypart">
+					</div>
+					<div class="col-xs-4" id="eRightHand">
+						<img src="../assets/monster/starter/hand_right_0.png" alt="Monster Bodypart">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-4 col-xs-offset-2" id="eLeftLeg">
+						<img src="../assets/monster/starter/leg_left_0.png" alt="Monster Bodypart">
+					</div>
+					<div class="col-xs-4" id="eRightLeg">
+						<img src="../assets/monster/starter/leg_right_0.png" alt="Monster Bodypart">
+					</div>
+				</div>
+				
+			</div>
+
+			<!-- Monster namebar -->
+			<div id="enemyNamebar">
+				<div class="row">
+					<div class="col-sm-8 col-sm-offset-2">
+						<div class="form-group">
+							<input type="text" name="enemyName" id="enemyName" value="" maxlength="20" placeholder="Insert monsters' name" class="form-control">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-8 col-sm-offset-2">
+						<button type="button" onclick="saveMonster(2)" class="controlBtn">Save</button>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- Buttons that appear after a battle has commenced -->
+		<div class="row">
+			<div class="col-sm-2 col-sm-offset-5" id="resetBar">
+				<button type="button" id="backButton" class="controlBtn btn-block" onclick="back()">Back</button>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

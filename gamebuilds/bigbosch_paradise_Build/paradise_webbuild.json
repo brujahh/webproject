@@ -1,0 +1,13 @@
+{
+"companyName": "DefaultCompany",
+"productName": "ParadiisiÕunad",
+"dataUrl": "paradise_webbuild.data.unityweb",
+"asmCodeUrl": "paradise_webbuild.asm.code.unityweb",
+"asmMemoryUrl": "paradise_webbuild.asm.memory.unityweb",
+"asmFrameworkUrl": "paradise_webbuild.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}

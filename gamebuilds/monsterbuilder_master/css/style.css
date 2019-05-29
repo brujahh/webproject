@@ -1,0 +1,212 @@
+/* Page */
+body {
+    background-color: #4A61F7;
+    padding-top: 50px;
+    color: #fff;
+    user-select: none;
+	background: -webkit-linear-gradient(left, #4A61F7,#80ED37);
+	background: -o-linear-gradient(right, #4A61F7, #80ED37); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(right, #4A61F7, #80ED37); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to right, #4A61F7 , #80ED37); /* Standard syntax */
+}
+
+h1 {
+	text-align: center;
+	margin: 10px;
+	font-family: 'VT323', monospace;
+	color: #80ED37;
+	font-size: 3.5em;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+h2 {
+    text-align: center;
+    margin: 10px;
+    font-family: 'VT323', monospace;
+    color: white;
+    font-size: 2em;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1em;
+    margin: 0px;
+    margin-bottom: 5px;
+    color: white;
+	
+}
+
+p{
+	text-align: center;
+    margin: 10px;
+    font-family: 'VT323', monospace;
+    color: white;
+    font-size: 2em;
+}
+
+img {
+    width: 100%;
+    cursor: pointer;
+}
+
+/* Underline for h2 */
+.underline {
+    border-bottom: #80ED37 0.1em solid;
+}
+
+/* Scale value for monsters */
+.scale {
+    margin: 0 auto;
+    width: 32%;
+}
+
+/* Remove spacing from between bodyparts */
+.col-xs-4 {
+    padding: 0;
+}
+
+/* Buttons that control gameplay. Different gradients for differen browsers*/
+.controlBtn {
+  	color: #fff;
+	background: -webkit-linear-gradient(top, #3F3F3F 50%, #1E1E1E 50%);
+	background: -moz-linear-gradient(top,  #3F3F3F 50%, #1E1E1E 50%); /* FF3.6+ *//
+	background: -o-linear-gradient(top,  #3F3F3F 50%,#1E1E1E 50%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #3F3F3F 50%,#1E1E1E 50%); /* IE10+ */
+  	border: none;
+  	margin-top: 1em;
+  	margin-bottom: 1em;
+  	padding: 0.5em;
+    border-radius: 5px;
+	font-family: 'VT323', monospace;
+	font-size: 1.4em;
+}
+
+/* button color changes after klick on it */
+.controlBtn:hover {
+    color: white;
+    background: -webkit-linear-gradient(top,  #3F3F3F 90%,#1E1E1E 10%);
+	background: -moz-linear-gradient(top,  #3F3F3F 90%, #1E1E1E 10%); /* FF3.6+ */
+	background: -o-linear-gradient(top,  #3F3F3F 90%,#1E1E1E 10%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #3F3F3F 90%,#1E1E1E 10%); /* IE10+ */
+	
+}
+
+.controlBtn:focus {
+    outline: none;
+}
+
+/* Navbar */
+.navbar-brand, .nav.navbar-nav.navbar-right {
+    font-family: 'Patrick Hand SC', cursive;
+    font-size: 2em;
+}
+
+/* navbar gradients for different browsers */
+.navbar {	
+	background: -webkit-linear-gradient(top,  #3F3F3F 50%,#1E1E1E 50%);
+	background: -moz-linear-gradient(top,  #3F3F3F 50%, #1E1E1E 50%); /* FF3.6+ */
+	background: -o-linear-gradient(top,  #3F3F3F 50%,#1E1E1E 50%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #3F3F3F 50%,#1E1E1E 50%); /* IE10+ */
+    border: none;
+    margin: 0;
+}
+
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav>li>a {
+    color: #afafaf;
+	font-family: 'VT323', monospace;
+}
+
+/* gradient for different browsers */
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+	background: -webkit-linear-gradient(top,  #4A8FF7 50%,#4A4AF7 50%);
+	background: -moz-linear-gradient(top,  #4A8FF7 50%, #4A4AF7 50%); /* FF3.6+ */
+	background: -webkit-linear-gradient(top,  #4A8FF7 50%,#4A4AF7 50%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #4A8FF7 50%,#4A4AF7 50%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #4A8FF7 50%,#4A4AF7 50%); /* IE10+ */
+	color: #fff;
+}
+
+/* Adds filters to loosing bodyparts */
+.greyed {
+    filter: grayscale(1) brightness(0.25); /* Microsoft Edge and Firefox 35+ */
+}
+
+/* Enemy monster in multiplayer */
+#enemyMonster {
+	visibility: hidden;
+}
+
+/* Save monster name input field */
+.form-control {
+    background-color: #000;
+    color: #fff;
+    border: none;
+}
+
+.form-group {
+    margin: 0;
+    margin-top: 1em;
+}
+
+/* Fight button that starts combat in multiplayer */
+.fightButton {
+    margin-right: 1em;
+}
+
+/* Home icon resize */
+.glyphicon.glyphicon-home{font-size:80%;}
+.glyphicon.glyphicon-user{font-size:80%;}
+.glyphicon.glyphicon-globe{font-size:80%;}
+
+/*Intro page*/
+.welcomingtext {
+    text-align:  center;
+    margin-top:3em;
+}
+
+/*Table with names who made this web*/
+#developerstable {
+    width: 50%;
+    display: -webkit-flex; /* Safari */
+    display: flex;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:4em;
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius:1em;
+}
+
+#developerstable div {
+    -webkit-flex: 1;  /* Safari 6.1+ */
+    -ms-flex: 1;  /* IE 10 */    
+    flex: 1;
+	margin-top:2em;
+}
+
+/*Resizing icons from developerstables*/
+.glyphicon.glyphicon-flag{font-size:300%;}
+.glyphicon.glyphicon-wrench{font-size:300%;}
+.glyphicon.glyphicon-tasks{font-size:300%;}
+.glyphicon.glyphicon-picture{font-size:300%;}
+.glyphicon.glyphicon-text-background{font-size:300%;}
+.glyphicon.glyphicon-cloud-upload{font-size:300%;}
+.glyphicon.glyphicon-eye-open{font-size:300%;}
+
+/*Text for developerstable*/
+/*Person subject*/
+p.italic {
+	font-style:italic;
+	font-size:1em;
+	font-family:Tahoma, Geneva, sans-serif;
+}
+
+/*Person name*/
+p.tabletext {
+    font-size:1.5em;
+}
+
+#resetBar {
+    display: none;
+}
